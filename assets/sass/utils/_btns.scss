@@ -1,0 +1,39 @@
+%btn {
+  letter-spacing: 0.05em;
+  color: $color-white;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  @extend %dib, %tr-25, %cup;
+
+  @media(max-width: 52rem) {
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+[class*=btn] {
+  @extend %btn;
+}
+
+[class*=-pill] {
+  border-radius: 50px;
+}
+
+[class*=btn-green] {
+  background-color: $bg-btn-green;
+
+  &:hover {
+    background-color: darken($bg-btn-green, 10);
+  }
+}
+
+[class*=btn-orange] {
+  background-color: $bg-btn-orange;
+
+  &:hover {
+    background-color: darken($bg-btn-orange, 10);
+  }
+}

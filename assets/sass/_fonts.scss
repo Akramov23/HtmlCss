@@ -1,0 +1,44 @@
+// ============= FONT PRIMARY
+@font-face {
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+  font-family: 'font-primary';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('../fonts/Roboto/Roboto-Medium.ttf');
+  font-family: 'font-primary';
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
+  font-family: 'font-primary';
+  font-weight: 700;
+}
+
+// ============= FONT SECONDARY
+@font-face {
+  src: url('../fonts/Poppins/Poppins-Regular.ttf');
+  font-family: 'font-secondary';
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('../fonts/Poppins/Poppins-Bold.ttf');
+  font-family: 'font-secondary';
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('../fonts/Poppins/Poppins-ExtraBold.ttf');
+  font-family: 'font-secondary';
+  font-weight: 800;
+}
+
+// ============= FONT OTHER
+@font-face {
+  src: url('../fonts/Graphik-Font-Family/GraphikMedium.otf');
+  font-family: 'Graphik';
+  font-weight: 500;
+}

@@ -1,0 +1,29 @@
+#brands {
+
+    .container {
+        @extend %df, %jcc, %fwr;
+        padding: 8rem 0 6rem;
+    }
+
+    .wrap {
+        @extend %df, %jcc, %fwr;
+    }
+
+    .brand {
+        background-color: $bg-brand-blue;
+        margin: 1.8rem .9rem 0;
+        border-radius: .6rem;
+        height: 5.6875rem;
+        width: 13.9375rem;
+        @extend %df, %tr-30;
+
+        &:hover {
+            box-shadow: 0 .25rem 5rem rgba(#8ec7c0, 0.4);
+        }
+
+        img {
+            @extend %m-auto;
+            max-width: 75%;
+        }
+    }
+}

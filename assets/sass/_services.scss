@@ -1,0 +1,147 @@
+#services {
+
+    .head {
+        @extend %df, %aic;
+
+        .title {
+            @extend %title;
+
+            h2 {
+                width: 30rem;
+            }
+        }
+
+        p {
+            padding: 3rem 5vw 0 7vw;
+            line-height: 1.7rem;
+            max-width: 33rem;
+        }
+
+        @media(max-width: 75rem) {
+
+            .title h2 {
+                width: 26rem;
+            }
+
+            p {
+                padding: 3rem 3vw 0 5vw;
+            }
+        }
+
+        @media(max-width: 65rem) {
+
+            .title h2 {
+                width: 24rem;
+            }
+
+            p {
+                padding: 3rem 1vw 0 4vw;
+            }
+        }
+
+        @media(max-width: 45rem) {
+            flex-direction: column;
+            text-align: center;
+
+            .title h2 {
+                max-width: 24rem;
+                margin: auto;
+                width: auto;
+            }
+
+            p {
+                padding: 1.5rem 0 2.5rem;
+                max-width: 25rem; 
+            }
+        }
+    }
+
+    .cards {
+        @extend %df, %jcsb;
+        padding-bottom: 9rem;
+        
+        .card {
+            @extend %df, %fdc, %jcsb, %tr-25;
+            background-color: $color-white;
+            padding: 3rem 2.2vw 3rem 0;
+            border-radius: 1.2rem;
+            width: 32%;
+
+            &:hover {
+                box-shadow: 0px 20px 84px rgba(245, 245, 245, 0.8);
+            }
+
+            .img {
+                background-color: $bg-card-green;
+                border-radius: 1.1rem;
+                height: 4.6rem;
+                width: 4.6rem;
+                @extend %df;
+
+                img {
+                    @extend %m-auto;
+                }
+            }
+
+            h3 {
+                color: $color-title;
+                padding: 1.5rem 0;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+
+            p {
+                padding-bottom: 1.7rem;
+                line-height: 1.8rem;
+            }
+
+            a.btn {
+                color: $color-more;
+                padding-left: 0;
+
+                &:hover {
+                    color: darken($color-more, 15)
+                }
+            }
+            a {
+                max-width: 12.15rem;
+
+                * {
+                    @extend %dib, %v-middle;
+    
+                    &:first-child {
+                        margin-right: .6rem;
+                    }
+                }
+            }
+        }
+
+        .card:nth-child(2) .img {
+            background-color: $bg-card-yellow;
+        }
+
+        .card:nth-child(3) .img {
+            background-color: $bg-card-pink;
+        }
+
+        @media(max-width: 52rem) {
+            text-align: center;
+
+            .img, a {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        @media(max-width: 45rem) {
+            flex-direction: column;
+            padding-bottom: 6rem;
+
+            .card {
+                max-width: 20rem;
+                margin: auto;
+                width: auto;
+            }
+        }
+    }
+}

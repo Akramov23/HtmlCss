@@ -1,0 +1,120 @@
+#header {
+    box-shadow: 0 0 1rem $color-white;
+    background-color: $color-white;
+    @extend %pof, %w-100, %t-0;
+    padding: 1rem 0 .5rem;
+    z-index: 1;
+
+    .container {
+        @extend %df, %jcsb, %aic;
+    }
+
+    a {
+        @extend %tr-25;
+
+        &:is(:not(.login, .active)):hover {
+            opacity: .5;
+        }
+
+        &.active {
+            font-family: 'Graphik';
+            color: $color-active;
+            font-weight: 500;
+        }
+    }
+
+    #logo {
+        @extend %df;
+
+        * {
+            width: calc(100% - .6rem);
+            @extend %m-auto;
+        }
+    }
+
+    #bar {
+        @extend %dn;
+    }
+
+    #bar:checked {
+
+        + label {
+            border-color: transparent;
+    
+            &::before {
+                transform: rotate(45deg);
+            }
+    
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        ~ #navbar {
+            transform: translateX(0);
+            @extend %vv;
+        }
+    }
+
+    label {
+        border-bottom: $side-button-weight solid $color-primary;
+        border-top: $side-button-weight solid $color-primary;
+        height: $side-button-height;
+        margin: 1rem .2rem 1rem 0;
+        width: $side-button-width;
+        @extend %por, %tr-25, %cup, %dn;
+    
+        &::before, &::after {
+            @extend %bg-1, %poa, %tr-25, %content, %w-100, %b-50;
+            height: $side-button-weight;
+            transform: translateY(50%);
+        }
+    }
+
+    #navbar {
+        @extend %tr-40, %r-0, %t-0;
+
+        ul {
+            padding-right: 4vw;
+
+            li {
+                @extend %dib, %por;
+                padding: 1rem 1.5rem;
+
+                .login {
+                    @extend %dn;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 55rem) {
+        padding-top: .3rem;
+        top: 0;
+
+        .container > .login {
+            display: none;
+        }
+
+        #logo * {
+            width: calc(100% - 1.5rem);
+        }
+
+        #navbar ul li .login, label {
+            display: inline-block;
+        }
+        
+        #navbar {
+            transform: translateX($sidebar-width + 1rem);
+            box-shadow: 0 0 1rem $bg-transparent-green;
+            background-color: $color-white;
+            height: $sidebar-height;
+            width: $sidebar-width;
+            position: absolute;
+            visibility: hidden;
+            padding-top: 4rem;
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+}

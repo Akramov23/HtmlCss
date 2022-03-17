@@ -1,0 +1,313 @@
+// DISPLAYS
+%dn {
+  display: none;
+}
+
+%db {
+  display: block;
+}
+
+%dib {
+  display: inline-block;
+}
+
+
+// FLEX BOXES
+%df {
+  display: flex;
+}
+
+%dif {
+  display: inline-flex;
+}
+
+%jcc {
+  justify-content: center;
+}
+
+%jcsb {
+  justify-content: space-between;
+  display: flex;
+}
+
+%aic {
+  align-items: center;
+}
+
+%aife {
+  align-items: flex-end;
+}
+
+%fwr {
+  flex-wrap: wrap;
+}
+
+%fdc {
+  flex-direction: column;
+}
+
+
+// POSITIONS
+%por {
+  position: relative;
+}
+
+%poa {
+  position: absolute;
+}
+
+%pof {
+  position: fixed;
+}
+
+%pos {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+
+// SIDES
+%t-0 {
+  top: 0;
+}
+
+%l-0 {
+  left: 0;
+}
+
+%r-0 {
+  right: 0;
+}
+
+%b-0 {
+  bottom: 0;
+}
+
+%t-50 {
+  top: 50%;
+}
+
+%l-50 {
+  left: 50%;
+}
+
+%r-50 {
+  right: 50%;
+}
+
+%b-50 {
+  bottom: 50%;
+}
+
+%t-100 {
+  top: 100%;
+}
+
+%l-100 {
+  left: 100%;
+}
+
+%r-100 {
+  right: 100%;
+}
+
+%b-100 {
+  bottom: 100%;
+}
+
+%t-auto {
+  top: 0;
+}
+
+%l-auto {
+  left: auto;
+}
+
+%r-auto {
+  right: auto;
+}
+
+%b-auto {
+  bottom: auto;
+}
+
+
+// VISIBILITIES
+%vh {
+  visibility: hidden;
+  transition: .3s;
+  opacity: 0;
+}
+
+%vv {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+// VERTICAL ALIGNS
+%v-top {
+  vertical-align: top;
+}
+
+%v-middle {
+  vertical-align: middle;
+}
+
+%v-bottom {
+  vertical-align: bottom;
+}
+
+
+// MARGINS
+%m-auto {
+  margin: auto;
+}
+
+%my-auto {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+%mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%m-0 {
+  margin: 0;
+}
+
+%p-0 {
+  padding: 0;
+}
+
+
+// WIDTH
+%w-50 {
+  width: 50%;
+}
+
+%h-50 {
+  height: 50%;
+}
+
+%w-100 {
+  width: 100%;
+}
+
+%h-100 {
+  height: 100%;
+}
+
+%w-100vw {
+  width: 100vw;
+}
+
+%h-100vh {
+  height: 100vh;
+}
+
+
+// TEXT ALIGNS
+%txt-cnr {
+  text-align: center;
+}
+
+%txt-l {
+  text-align: left;
+}
+
+%txt-r {
+  text-align: right;
+}
+
+
+// CURSORS
+%cup {
+  cursor: pointer;
+}
+
+%cud {
+  cursor: default;
+}
+
+
+// COLORS
+%c-1 {
+  color: $color-primary;
+}
+
+
+// BACKGROUNDS
+%bg-1 {
+  background-color: $color-primary;
+}
+
+
+// TRANSITIONS
+%tr-25 {
+  transition: .25s;
+}
+
+%tr-30 {
+  transition: .3s;
+}
+
+%tr-35 {
+  transition: .35s;
+}
+
+%tr-40 {
+  transition: .4s;
+}
+
+
+// CONTENT
+%content {
+  content: '';
+}
+
+
+// TITLE
+%title {
+  @extend %w-100, %my-auto;
+  // padding: 3rem 0;
+
+  > span {
+      background-color: $color-white;
+      color: $color-orange-1;
+      padding: .6rem 1.2rem;
+      letter-spacing: 0.1em;
+      border-radius: .22rem;
+      @extend %dib;
+  }
+
+  h2 {
+    font-family: 'font-secondary';
+    color: $color-title;
+    line-height: 4.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: .5rem 0;
+
+    span {
+      color: $color-orange-1;
+    }
+
+    @media(max-width: 75rem) {
+      line-height: 4rem;
+      font-size: 2.2rem;
+    }
+
+    @media(max-width: 65rem) {
+      line-height: 3.5rem;
+      font-size: 2rem;
+    }
+
+    @media(max-width: 55rem) {
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+  }
+}

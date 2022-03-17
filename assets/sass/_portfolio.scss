@@ -1,0 +1,136 @@
+#portfolio {
+
+    .container {
+        @extend %df;
+    }
+
+    .left {
+        margin-right: 1.5rem;
+        padding-bottom: 3rem;
+        @extend %w-50;
+
+        .title {
+            @extend %title;
+
+            h2 {
+                padding-bottom: 7rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        img {
+            padding-right: 2vw;
+        }
+
+        h3 {
+            color: $color-black;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 2rem 0;
+        }
+
+        p {
+            padding-bottom: 2.6rem;
+            line-height: 1.7rem;
+            padding-right: 1vw;
+        }
+
+        a > * {
+            @extend %dib, %v-middle;
+
+            &:first-child {
+                margin-right: .6rem;
+            }
+        }
+    }
+
+    .right {
+        margin-left: 1.5rem;
+        padding-left: 2vw;
+        padding-top: 5vw;
+        @extend %w-50;
+
+        .rank {
+            padding-bottom: 3.5rem;
+            padding-left: 2vw;
+            
+            div {
+                @extend %df, %jcsb, %aic;
+                padding: 1.5rem 0;
+
+                b {
+                    color: $bg-transparent-green;
+                    margin-right: 2rem;
+                    font-size: 2.1rem;
+                    font-weight: 700;
+                    width: 3.6rem;
+                }
+
+                p {
+                    line-height: 1.5rem;
+                    margin-right: 1rem;
+                    color: $color-more;
+                    font-weight: 500;
+                    width: 9rem;
+                }
+
+                span {
+                    color: $color-orange-2;
+                    font-size: .85rem;
+                    font-weight: 700;
+                    width: 8.8rem;
+                }
+            }
+        }
+
+        h3 {
+            color: $color-black;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 2rem 0;
+        }
+
+        > p {
+            padding-bottom: 2.6rem;
+            line-height: 1.7rem;
+            padding-right: 1vw;
+        }
+    }
+
+    @media(max-width: 45rem) {
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left, .right {
+            padding: 0 0 3rem;
+            max-width: 30rem;
+            margin: 0 1rem;
+            width: auto;
+
+            .title h2 {
+                padding-bottom: 5rem;
+            }
+
+            img {
+                padding: 0 4vw;
+            }
+
+            .rank div {
+                flex-direction: column;
+
+                * {
+                    width: auto !important;
+                    margin: 0 !important;
+                }
+
+                p {
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
